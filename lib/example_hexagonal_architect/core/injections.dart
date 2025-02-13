@@ -15,13 +15,13 @@ void setupInjections() async {
 
   // REPOSITORY
   getIt.registerSingleton<WarriorsZRepository>(
-      WarriorsZRepositoryImpl(getIt<WarriorsZApi>()));
+     WarriorsZRepositoryImpl(getIt<WarriorsZApi>()));
 
   // SERVICE
   getIt.registerSingleton<WarriorsZService>(
       WarriorsZServiceImpl(getIt<WarriorsZRepository>()));
 
-  // USE CASE
+   // USE CASE
   getIt.registerSingleton<FindAllWarriorsZUseCase>(
       FindAllWarriorsZUseCase(getIt<WarriorsZService>()));
 
